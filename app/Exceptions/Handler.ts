@@ -21,3 +21,4 @@ export default class ExceptionHandler extends HttpExceptionHandler {
     super(Logger)
   }
 }
+  

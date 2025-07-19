@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@adonisjs/core": "^5.5.3",
+    "@adonisjs/lucid": "^18.4.0",
     "@adonisjs/repl": "^3.1.9",
     "proxy-addr": "^2.0.7",
     "reflect-metadata": "^0.1.13",
