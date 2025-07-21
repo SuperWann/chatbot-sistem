@@ -82,7 +82,6 @@ export default class ChatbotsController {
             return ctx.response.badRequest({
                 status: 400,
                 message: "error",
-                error
             })
         }
     }
@@ -95,7 +94,6 @@ export default class ChatbotsController {
             return ctx.response.notFound({
                 status: 404,
                 message: "not found",
-                error: "data not found"
             })
         }
 
@@ -136,7 +134,6 @@ export default class ChatbotsController {
             return ctx.response.notFound({
                 status: 404,
                 message: "not found",
-                error: "data not found"
             })
         }
 
@@ -181,7 +178,6 @@ export default class ChatbotsController {
             return ctx.response.notFound({
                 status: 404,
                 message: "not found",
-                error: "data not found"
             })
         }
 
@@ -218,7 +214,6 @@ export default class ChatbotsController {
             return ctx.response.notFound({
                 status: 404,
                 message: "not found",
-                error: "data not found"
             })
         }
 
