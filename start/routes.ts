@@ -20,6 +20,14 @@
 
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.get('/', async () => {
-  return 'hello world'
-})
+Route.group(() => {
+  Route.group(()=>{
+    Route.get('/', 'ChatbotsController.showAllConversation')
+    Route.get(':id', 'ChatbotsController.showConversationById')
+    Route.delete('message/:id', 'ChatbotsController.deleteMessage')
+    Route.delete(':id', 'ChatbotsController.deleteConversation')
+  }).prefix('conversation').middleware("auth")
+
+  Route.post('questions', 'ChatbotsController.store')
+
+}).prefix('api')
