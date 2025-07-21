@@ -6,7 +6,7 @@ export default class extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.enum("sender_type", ["question", "answer"])
+      table.enum("sender_type", ["user", "bot"])
       table.text('message')
       /**
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL

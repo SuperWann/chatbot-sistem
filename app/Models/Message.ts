@@ -6,7 +6,7 @@ export default class Message extends BaseModel {
   public id: number
 
   @column()
-  declare sender_type: "question" | "answer"
+  declare sender_type: "user" | "bot"
 
   @column()
   declare message: string
