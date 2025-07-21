@@ -2,7 +2,7 @@ import { rules, schema } from '@ioc:Adonis/Core/Validator'
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class ChatValidator {
-  constructor(protected ctx: HttpContextContract) {}
+  constructor(protected ctx: HttpContextContract) { }
 
   /*
    * Define schema to validate the "shape", "type", "formatting" and "integrity" of data.
@@ -25,6 +25,7 @@ export default class ChatValidator {
    */
   public schema = schema.create({
     message: schema.string(),
+    // additional_context: schema.string.optional(),
     session_id: schema.string.optional({}, [rules.uuid()])
   })
 
